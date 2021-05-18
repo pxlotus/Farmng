@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(60deg, goldenrod, brown) no-repeat;
+    background-size: cover;
+    font-family: satisfy, Arial, Helvetica, sans-serif;
+}
+header {
+    background: url(/images/raphael-rychetsky-li9JfUHQfOY-unsplash.jpg), url(/images/images\ \(2\).jpg) ;
+    background-repeat: no-repeat;
+    background-size: 300px 300px, 300px 150px;
+    background-position: top left, bottom right;
+    border-radius: 55%;
+    height: 40vh;
+    margin: 10px;
+}
+
+.nav {
+    float: right;
+    top: 0;
+    position: sticky;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.nav li a {
+    letter-spacing: .1em;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    color: rgb(58, 58, 58);
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: #565656;
+    opacity: 0.5;
+    transition: 500ms ease;
+}
+
+.nav li a:active {
+    color:rgb(58, 58, 58);
+    opacity: 1;
+    transition: 100ms ease-out;
+}
+
+#logo {
+    color: rgb(58, 58, 58);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin: 40px;
+    font-weight: 600px;
+    text-shadow: 3px 3px 2px gray;
+    
+}
+
+span {
+    margin-left: 25px;
+    padding: 0;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    text-decoration:dotted;
+    color: yellowgreen;
+    text-shadow: none;
+}
+
+.main-container {
+    padding: 20px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+#intro p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
