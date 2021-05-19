@@ -23,6 +23,8 @@ body {
     height: 50vh;
     letter-spacing: 3px;
     text-transform: uppercase;
+    color: rgb(146, 146, 146);
+    margin: 30%;
 }
 
 /*        company logo     */
