@@ -11,7 +11,7 @@ body {
 
 .header {
     display: flex;
-    width: auto;
+    max-width: 100%;
     height: 70vh;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,13 @@ body {
 .burger {
     display: none;
     cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: navy;
+    transition: .5s;
 }
 
 /*    tour button & smooth scroll      */
@@ -350,3 +357,115 @@ body {
 
 /*    Responsive design. here we go    */ 
 
+@media screen and (max-width:500px) {
+    body {
+        overflow-x: hidden;
+    }
+    .header {
+        height: 70vh;
+        box-shadow: none;
+        background: url(/images/download\ \(3\).jpg);
+        background-size: cover;
+    }
+    #cover {
+        font-size: 2vw;
+        height: 5vh;
+    }
+    .logo {
+        display: none;
+    }
+    .nav {
+        display: block;
+        clear: both;
+        align-items: center;
+        padding: 50px;
+        float: left;
+    }
+    .nav-links {
+        position: absolute;
+        top: 15vh;
+        float: left;
+        left: 0;
+        background-color: #6C876D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform .5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-box {
+        border: none;
+    }
+    .side-content-box {
+        display: none;
+    }
+
+    .grid-box {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+    }
+    .grid-2 {
+        grid-template-columns: auto auto auto;
+        grid-gap: 3px;
+        font-size: 2.1vw;
+    }
+    .team-text {
+        display: none;
+    }
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer #location {
+        font-size: 3vw;
+        background-color: #1c5e45;
+        width: 100%;
+        text-align: center;
+    }
+    .footer #contact {
+        font-size: 3vw;
+        background-color: #225240;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+.nav-active {
+    transform: translateX(100%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-50px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
